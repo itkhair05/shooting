@@ -46,5 +46,6 @@ def shooting():
     return render_template('shooting.html', line1=line1, line2=line2)
 
 if __name__ == '__main__':
-   port = int(os.environ.get("PORT", 5000))
-app.run(host="0.0.0.0", port=port)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
+
