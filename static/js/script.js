@@ -54,8 +54,8 @@ console.log("📜 fullText = ", fullText);
             canvas = document.getElementById('canvas');
             ctx = canvas.getContext('2d');
             resizeCanvas();
-            shootInterval = setInterval(shootDot, 100);
-            starInterval = setInterval(createShootingStar, 2000);
+            shootInterval = setInterval(shootDot, 60);
+            starInterval = setInterval(createShootingStar, 1500);
             animate();
         }
 
@@ -64,7 +64,7 @@ console.log("📜 fullText = ", fullText);
             canvas.height = window.innerHeight;
             bearY = canvas.height - 80;
             stars.length = 0;
-            for (let i = 0; i < 100; i++) {
+            for (let i = 0; i < 300; i++) {
                 stars.push({
                     x: Math.random() * canvas.width,
                     y: Math.random() * canvas.height,
@@ -232,7 +232,7 @@ console.log("📜 fullText = ", fullText);
             const targetDots = targetDotsQueue[currentCharIndex];
             if (!targetDots || targetDots.length === 0) return;
 
-            const batch = 2;
+            const batch = 5;
             for (let i = 0; i < batch; i++) {
                 const target = targetDots.shift();
                 if (!target) return;
