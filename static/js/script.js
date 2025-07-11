@@ -54,7 +54,7 @@ console.log("📜 fullText = ", fullText);
             canvas = document.getElementById('canvas');
             ctx = canvas.getContext('2d');
             resizeCanvas();
-            shootInterval = setInterval(shootDot, 60);
+            shootInterval = setInterval(shootDot, 80);
             starInterval = setInterval(createShootingStar, 1500);
             animate();
         }
