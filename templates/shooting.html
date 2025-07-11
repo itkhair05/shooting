@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shooting Hearts - Custom Text</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<!-- ✅ TRUYỀN DỮ LIỆU line1 và line2 từ Flask qua thuộc tính data-* -->
+<body data-line1="{{ line1 | e }}" data-line2="{{ line2 | e }}">
+    <!-- Canvas Page (luôn hiển thị) -->
+    <div class="canvas-page" id="canvasPage" style="opacity:1;pointer-events:all;">
+        <canvas id="canvas"></canvas>
+        <div id="rotateNotice" style="display:none;">
+            <div class="overlay">
+                <p>Vui lòng xoay màn hình sang ngang để có trải nghiệm tốt nhất 🌟</p>
+            </div>
+        </div>
+        <img id="bear" src="https://i.pinimg.com/originals/e5/c5/4c/e5c54cd43fd75a7ec5b7cf0f65838ec3.gif" alt="Bear" />
+    </div>
+    <script src="/static/js/script.js"></script>
+    <audio id="bgMusic" src="/static/audio/love.mp3" preload="auto" loop></audio>
+</body>
+</html>
